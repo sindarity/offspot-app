@@ -33,7 +33,7 @@ function NavBar({ title, onBack }: { title: string; onBack: () => void }) {
   return (
     <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 bg-white sticky top-0 z-10">
       <button onClick={onBack} className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Back
       </button>
       <span className="text-sm font-medium text-gray-900">{title}</span>
@@ -54,10 +54,10 @@ function WolfMark({ size = 48 }: { size?: number }) {
       />
       {/* Fallback SVG wolf mark */}
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: size, height: size, position: "absolute" }}>
-        <polygon points="24,4 32,14 28,14 34,22 28,20 30,28 24,22 18,28 20,20 14,22 20,14 16,14" fill="#1D9E75" opacity="0.9" />
-        <polygon points="24,22 20,32 24,30 28,32" fill="#0F6E56" />
-        <circle cx="20" cy="18" r="1.5" fill="#E1F5EE" />
-        <circle cx="28" cy="18" r="1.5" fill="#E1F5EE" />
+        <polygon points="24,4 32,14 28,14 34,22 28,20 30,28 24,22 18,28 20,20 14,22 20,14 16,14" fill="#1D9E75" opacity="0.9"/>
+        <polygon points="24,22 20,32 24,30 28,32" fill="#0F6E56"/>
+        <circle cx="20" cy="18" r="1.5" fill="#E1F5EE"/>
+        <circle cx="28" cy="18" r="1.5" fill="#E1F5EE"/>
       </svg>
     </div>
   );
@@ -100,14 +100,14 @@ function HomeScreen({ onNav }: { onNav: (s: Screen) => void }) {
           onClick={() => onNav("jobs")}
           className="w-full bg-teal-500 hover:bg-teal-400 text-gray-950 font-bold py-3.5 rounded-xl text-[15px] transition-all active:scale-95 mb-3 flex items-center justify-center gap-2"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
           Find your den
         </button>
         <button
           onClick={() => onNav("employer")}
           className="w-full bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 font-medium py-3.5 rounded-xl text-[15px] transition-all active:scale-95 flex items-center justify-center gap-2"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
           I'm building a pack
         </button>
       </div>
@@ -171,7 +171,7 @@ function JobsScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Screen) 
               </div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-600 flex-shrink-0 mt-1">
-              <path d="M9 18l6-6-6-6" />
+              <path d="M9 18l6-6-6-6"/>
             </svg>
           </button>
         ))}
@@ -189,7 +189,7 @@ function JobsScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Screen) 
 
 // ── SCREEN: Setup ──────────────────────────────────────────
 function SetupScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Screen) => void }) {
-  const [pace, setPace] = useState < PaceOption > ("nolimit");
+  const [pace, setPace] = useState<PaceOption>("nolimit");
   const paces: { id: PaceOption; icon: string; label: string; desc: string }[] = [
     { id: "relaxed", icon: "🌿", label: "Relaxed", desc: "5 min per question, unlimited re-records" },
     { id: "standard", icon: "⚡", label: "Standard", desc: "3 min per question, 2 re-records" },
@@ -229,7 +229,7 @@ function SetupScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Screen)
 
         <button onClick={() => onNav("interview")}
           className="w-full bg-teal-500 hover:bg-teal-400 text-gray-950 font-bold py-3.5 rounded-xl text-[15px] transition-all active:scale-95 flex items-center justify-center gap-2">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           Enter the den
         </button>
       </div>
@@ -270,7 +270,7 @@ function InterviewScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Scr
             <span className="text-xs text-white font-medium">REC</span>
           </div>
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-700 mb-2">
-            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
           </svg>
           <p className="text-xs text-gray-600">Camera preview</p>
         </div>
@@ -278,9 +278,9 @@ function InterviewScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Scr
         {/* Controls */}
         <div className="flex justify-center gap-3 mb-5">
           {[
-            { label: "Mute", icon: <path d="M1 1l22 22M9 9v3a3 3 0 005.12 2.12M15 9.34V4a3 3 0 00-5.94-.6M17 16.95A7 7 0 015 12v-2m14 0v2a7 7 0 01-.11 1.23M12 20v4M8 20h8" /> },
-            { label: "Camera off", icon: <><path d="M16 16v1a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2h2m5.66 0H14a2 2 0 012 2v3.34l1 1L23 7v10" /><line x1="1" y1="1" x2="23" y2="23" /></> },
-            { label: "Re-record", icon: <><polyline points="1 4 1 10 7 10" /><path d="M3.51 15a9 9 0 102.13-9.36L1 10" /></> },
+            { label: "Mute", icon: <path d="M1 1l22 22M9 9v3a3 3 0 005.12 2.12M15 9.34V4a3 3 0 00-5.94-.6M17 16.95A7 7 0 015 12v-2m14 0v2a7 7 0 01-.11 1.23M12 20v4M8 20h8"/> },
+            { label: "Camera off", icon: <><path d="M16 16v1a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2h2m5.66 0H14a2 2 0 012 2v3.34l1 1L23 7v10"/><line x1="1" y1="1" x2="23" y2="23"/></> },
+            { label: "Re-record", icon: <><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></> },
           ].map((btn) => (
             <button key={btn.label} aria-label={btn.label}
               className="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 hover:border-gray-500 flex items-center justify-center transition-colors">
@@ -289,14 +289,14 @@ function InterviewScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Scr
           ))}
           <button aria-label="Stop recording" onClick={() => onNav("review")}
             className="w-12 h-12 rounded-full bg-red-600 hover:bg-red-500 flex items-center justify-center transition-colors">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="3" y="3" width="18" height="18" rx="2" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
           </button>
         </div>
 
         <button onClick={() => onNav("review")}
           className="w-full bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 font-medium py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2">
           Done — next question
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
     </div>
@@ -331,7 +331,7 @@ function ReviewScreen({ onBack, onNav }: { onBack: () => void; onNav: (s: Screen
 
         <button onClick={() => onNav("done")}
           className="w-full bg-teal-500 hover:bg-teal-400 text-gray-950 font-bold py-3.5 rounded-xl text-[15px] transition-all active:scale-95 flex items-center justify-center gap-2">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           Submit to the pack
         </button>
       </div>
@@ -344,7 +344,7 @@ function DoneScreen({ onNav }: { onNav: (s: Screen) => void }) {
   return (
     <div className="min-h-screen bg-gray-950 text-white px-5 py-10 flex flex-col items-center text-center">
       <div className="w-20 h-20 bg-teal-950 border border-teal-700 rounded-full flex items-center justify-center mb-5">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <h1 className="text-2xl font-black tracking-tight mb-2">You're in the den.</h1>
       <p className="text-gray-400 text-[15px] leading-relaxed max-w-xs mb-8">
@@ -380,7 +380,7 @@ function DoneScreen({ onNav }: { onNav: (s: Screen) => void }) {
       <button onClick={() => onNav("employer")}
         className="w-full border border-gray-700 hover:border-gray-500 text-gray-300 font-medium py-3 rounded-xl text-sm transition-all flex items-center justify-center gap-2">
         See the employer view
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
     </div>
   );
@@ -413,7 +413,7 @@ function EmployerScreen({ onBack }: { onBack: () => void }) {
               <button
                 onClick={() => alert(a.shortlisted ? `Profile revealed:\nCandidate #${a.num}\nname@email.com` : "Watch their video answers before revealing identity.")}
                 className="flex-1 bg-teal-500 hover:bg-teal-400 text-gray-950 font-semibold py-2.5 rounded-xl text-sm transition-all flex items-center justify-center gap-1.5">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 {a.shortlisted ? "Reveal profile" : "Watch answers"}
               </button>
               {!a.shortlisted && (
@@ -435,7 +435,7 @@ function EmployerScreen({ onBack }: { onBack: () => void }) {
 
 // ── Root App ───────────────────────────────────────────────
 export default function WLFDENApp() {
-  const [screen, setScreen] = useState < Screen > ("home");
+  const [screen, setScreen] = useState<Screen>("home");
   const history: Screen[] = ["home"];
 
   const go = (s: Screen) => setScreen(s);
